@@ -40,6 +40,9 @@ pip install gdown
 gdown fileID
 # this is how you see the fileID on the link you copy 
 # https://google.com/file/d/**fileID**/view?usp=drive_link
+# gdown 1qpEl3FRKfYSQFilqTmOWIctFosFYbNae
+# gdown 1jVnVxgRQCqy8dKwWY8ajrsv_AXE0_LGQ
+# gdown 15VL84_Q4QBgiLlug01BwfRzTx2YpTDqQ
 
 # Install the graphviz package needed by the dataflow compiler
 sudo apt-get install -y graphviz graphviz-dev
