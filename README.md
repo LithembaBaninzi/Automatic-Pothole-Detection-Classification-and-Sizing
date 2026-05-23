@@ -69,24 +69,45 @@ pip install -r requirements.txt
 
 ## 🛠️ Installation
 
-### 1. Clone the repository
+### 1. Install HailoRT (on Raspberry Pi)
+```bash
+sudo apt install hailo-all -y
+sudo reboot
+```
+
+### 2. Clone the repository
 ```bash
 git clone https://github.com/LithembaBaninzi/Automatic-Pothole-Detection-Classification-and-Sizing.git
 cd Automatic-Pothole-Detection-Classification-and-Sizing
 ```
 
-### 2. Set up a Python virtual environment
+### 3. Virtual Environment Setup for Hailo‑8 NPU on Raspberry Pi 5
+
+This provides a pre‑configured virtual environment that includes all necessary libraries.
+
+## Clone the Hailo Examples
 ```bash
-python3 -m venv hailo_env
-source hailo_env/bin/activate
-pip install -r requirements.txt
+# Clone the Hailo examples (includes HailoRT bindings, post‑processing, etc.)
+git clone https://github.com/hailo-ai/hailo-rpi5-examples.git
+cd hailo-rpi5-examples
 ```
 
-### 3. Install HailoRT (on Raspberry Pi)
+## Run the Setup Script
+This creates a virtual environment and installs all dependencies.
 ```bash
-sudo apt install hailo-all -y
-sudo reboot
+./setup_env.sh
 ```
+
+## Activate the Environment
+```bash
+source setup_env.sh
+```
+*After activation, you can install any additional packages your scripts need (e.g., ultralytics, opencv-python, pyserial):*
+```bash
+pip install ultralytics opencv-python pyserial
+```
+✅ This method is tested and guarantees compatibility with the Hailo‑8 NPU on the Raspberry Pi 5.
+
 
 ### 4. Download the calibration and model files 
 *(see the `calibration/` and `models/` folders).*
@@ -180,7 +201,6 @@ For a full discussion, limitations, and future work, please read the final repor
 ├── outputs/               # Sample input/output videos and example CSV
 ├── dashboard/             # Flask web dashboard (contains a .zip with all files)
 ├── docs/                  # Documentation (ONNX → HEF conversion guide, etc.)
-├── requirements.txt       # Python dependencies
 ├── LICENSE                # MIT License
 └── README.md              # This file
 ```
