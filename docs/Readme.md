@@ -40,9 +40,6 @@ pip install gdown
 gdown fileID
 # this is how you see the fileID on the link you copy 
 # https://google.com/file/d/**fileID**/view?usp=drive_link
-# gdown 1qpEl3FRKfYSQFilqTmOWIctFosFYbNae
-# gdown 1jVnVxgRQCqy8dKwWY8ajrsv_AXE0_LGQ
-# gdown 15VL84_Q4QBgiLlug01BwfRzTx2YpTDqQ
 
 # Install the graphviz package needed by the dataflow compiler
 sudo apt-get install -y graphviz graphviz-dev
@@ -68,7 +65,7 @@ hailomz compile --ckpt ./data/filename.onnx --hw-arch hailo8 --classes 1 --calib
 # The output will be saved as yolov8s.hef
 
 # Copy the file into your host PC
-scp -i "~/.ssh/aws-ft-key-pair.pem" ubuntu@ec2-52-91-95-109.compute-1.amazomaws.com:~yolov8s.hef ./pothole_detector.hef
+scp -i "~/.ssh/aws-ft-key-pair.pem" ubuntu@ec2-**-**-**-***.8compute-1.amazomaws.com:~yolov8s.hef ./pothole_detector.hef
 ```
 Then shut down the EC2 instance or your Linux machine; you are done with it 
 
