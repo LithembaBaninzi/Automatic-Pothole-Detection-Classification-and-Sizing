@@ -52,12 +52,6 @@ The system achieves **~13 FPS** on the Pi 5 + Hailo‑8, with average width erro
 
 ## 📦 Software & Dependencies
 
-All scripts are written in Python 3.11+. Install the required packages:
-
-```bash
-pip install -r requirements.txt
-```
-
 # Key Libraries
 
 - **ultralytics** – YOLOv8‑seg model
